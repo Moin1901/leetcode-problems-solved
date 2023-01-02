@@ -19,9 +19,9 @@ public:
         while(!st.empty()){
             TreeNode * t=st.top();
             st.pop();
+             ans.push_back(t->val);
             if(t->right!=NULL)st.push(t->right);
             if(t->left!=NULL)st.push(t->left);
-            ans.push_back(t->val);
         }
         return ans;
         
