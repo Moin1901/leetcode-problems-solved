@@ -20,7 +20,7 @@ public:
         if(root==NULL)return 0;
         int lhs=max(0,maxdo(root->left,maxi));
         int rhs=max(0,maxdo(root->right,maxi));
-        maxi=max(maxi,root->val+lhs+rhs );
+        maxi=max(maxi,lhs+rhs+root->val);
         return root->val+max(lhs,rhs);
     }
 };
