@@ -12,6 +12,7 @@ public:
         inorder(root->left, k);
         if (--k == 0){
             ans = root->val;
+            return;
         } 
         inorder(root->right, k);
     }  
